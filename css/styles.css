@@ -112,6 +112,7 @@ body {
   align-items: center;
   flex-direction: row;
   padding-top: 5rem;
+  
 }
 
 .FirstElement .profile-photo {
@@ -121,6 +122,7 @@ body {
   overflow: hidden;
   border: 15px solid #444444;
   box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
+  order: 2;
   
 }
 
@@ -135,10 +137,11 @@ body {
 }
 
 .profile-text {
+  order: 1;
   max-width: 700px;
   display: flex;
   flex-direction: column;
-  margin: 0 250px;
+  margin: 0 0 0 100px;
 }
 
 .profile-text h5 {
@@ -179,11 +182,12 @@ body {
 /*-----------Social Icons-----------------*/
 
 .social-icons {
+  order: 3;
   position:relative;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  margin:0 26px 50px 0;
+  gap: 27px;
+  margin:0 26px 10px 0;
   align-items: flex-end;
 }
 
@@ -502,9 +506,10 @@ body {
 }
 /*---------------------------Contact Me---------------------------*/
 .contact-content{
-  padding: 100px 0;
+  margin-bottom: 200px;
   color: #fff;
   text-align: center;
+  
 }
 .contact-content .contact-title h4{
   font-size: 40px;
@@ -524,6 +529,7 @@ body {
   padding: 15px;
   border: 0;
   margin-bottom: 10px;
+  border-radius: 5px;
 }
 
 .contact .submit{
@@ -532,6 +538,7 @@ body {
   padding: 10px 40px;
   font-weight:bold ;
   font-size: 18px;
+  border-radius: 20px;
 }
 .contact .submit:hover{
   transform: scale(1.1);
@@ -573,29 +580,46 @@ body {
     width: 700px; /* Adjust container width for tablets */
   }
 
-  .profile-text {
-    width: 90%; /* Adjust text width */
-  }
-
-  .FirstElement .profile-text p {
-    text-align: justify;
-  }
-
+  
   .about {
     flex-direction: column;
     flex-basis: 100%;
   }
 
   .project {
-    flex-basis: 48%; /* Projects in 2 columns for tablets */
+    flex-basis: 48%; 
     margin-bottom: 30px;
   }
+
+  .FirstElement {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
 }
 
+.profile-photo {
+    flex-shrink: 0; 
+}
+
+.profile-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.social-icons {
+    display: flex;
+    gap: 25px; 
+    margin-top: 30px; 
+}
+}
+
+
 /* For mobile devices */
-@media only screen and (max-width: 767px) and (min-width:600px){
+@media only screen and (max-width: 767px) and (min-width:300px){
   .container {
-    width: 100%; /* Full width for mobile */
+    width: 100%; 
     padding: 0 20px;
   }
   .header {
@@ -605,7 +629,7 @@ body {
     padding: 10px 20px;
   }
   .header .menu_icon {
-    display: block; /* Show menu icon on mobile */
+    display: block; 
   }
 
   .header ul{
@@ -633,22 +657,25 @@ body {
     display: block; 
   }
   .FirstElement {
-    flex-direction: column; /* Switch to column for mobile */
+    flex-direction: column; 
     align-items: center;
-    text-align: center; /* Center align for mobile */
+    text-align: center; 
   }
   .profile-text {
     width: 100%;
     text-align: center;
     flex-direction:column;
+    order: 2;
+    margin: 0 0 0 20px;
   }
   .profile-photo {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 0 20px 0px;
-    width: 200px; /* Resize for mobile */
+    margin: 0 0 20px 10px;
+    width: 200px; 
     height: 200px;
+    order: 1;
     
   }
   .profile-photo img {
@@ -657,22 +684,32 @@ body {
   }
   .social-icons {
     display:flex;
-    justify-content: center;
     flex-direction: row;
-    margin:5px 10px ;
-   
+    margin:5px 0 0 50px ;
+    order:3
   }
 
   .about {
     flex-direction: column;
     margin-bottom: 30px;
   }
-
+  .project-content {
+    margin-top: 350px;
+    justify-content: center;
+    
+  }
   .project {
     flex-basis: 100%;
     margin-bottom: 30px;
   }
-
+  .education-content .row .education,
+  .education-content .row .internship
+  {
+    color: #e5e5e5;
+    flex:0 0 80%;
+    max-width: 50%;
+    
+  } 
   .header .menu_icon {
     display: block;
     color: #fff;

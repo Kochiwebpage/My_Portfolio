@@ -56,28 +56,27 @@
             
             <div class="btn-group">
                 <a href="Img/" class="btn active">Download CV</a>
-                <a href="https://www.linkedin.com/in/kochi-therasa-3308541b9" class="btn linkedin-btn">LinkedIn</a>
+                <a href= "https://www.linkedin.com/in/kochitherasa-a-3308541b9" class="btn linkedin-btn">LinkedIn</a>
             </div>
         </div>    
-            <div class="social-icons">
-                <a href="https://www.facebook.com/share/xJBqv3UUoQtYXAa5/" class="social facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://youtube.com/@timewithjesus6261" class="social youtube">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/yourprofile" class="social linkedin">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://www.instagram.com/anutherasa" class="social instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://github.com/Kochiwebpage" class="social github">
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
-        
-
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/kochitherasa-a-3308541b9" class="social linkedin">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/Kochiwebpage" class="social github">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.facebook.com/share/xJBqv3UUoQtYXAa5/" class="social facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://youtube.com/@timewithjesus6261?si=mG3dSW1WRiSDGjzA" class="social youtube">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com/anutherasa" class="social instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+               
+        </div>
     </div>
 
     <!-------------------------- About Section -------------------------->
@@ -271,12 +270,13 @@
                 <p>Get In Touch</p>
             </div>
             <div class="contact">
-                <form name="submitToGoogleSheet">
-                    <input type="text" name="NAME" placeholder="Name" required>
-                    <input type="email" name="EMAIL" placeholder="Email" required>
-                    <input type="text" name="SUBJECT" placeholder="Subject">
-                    <textarea name="MESSAGE" placeholder="Message"></textarea>
-                    <input type="submit" value="Send Message" class="submit">
+                <form  action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="883ab05d-b813-49eb-b11a-285dc65ae5b2">
+                    <input type="text" name="NAME" placeholder=" Your Name" class="contact-inputs"  required>
+                    <input type="email" name="EMAIL" placeholder="Your Email" class="contact-inputs" required>
+                    <input type="text" name="SUBJECT" placeholder="Subject" class="contact-inputs">
+                    <textarea name="MESSAGE" placeholder="Message" class="contact-inputs"></textarea>
+                    <button type="submit" value="Send Message" class="submit">Submit
                 </form>
                 <span id="msg"></span>
             </div>
