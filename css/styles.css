@@ -379,8 +379,9 @@ body {
   max-width: 50%;
   margin-top: 30px;
 } 
+
 .education-content  h2.title{
-  font-size:24px;
+  font-size:36px;
   margin-bottom: 30px;
   font-weight: 700;
 }
@@ -690,45 +691,37 @@ body {
 
 
   .about-area {
-    flex-direction: column; /* Stack items vertically */
-    padding: 20px; /* Reduce padding */
-    margin-right: 0; /* Remove right margin */
+    flex-direction: column; 
+    padding: 40px; 
+    margin-right: 0; 
   }
 
   .about {
-    flex-direction: column; /* Stack content */
-    align-items: center; /* Center content */
+    flex-direction: column; 
+    align-items: center; 
   }
 
   .about-content {
-    flex-basis: 100%; /* Take full width */
+    flex-basis: 100%; 
     text-align: center;
   }
-
+  .about-content ul {
+    padding: 20px 0;
+  }
   .about-content h4 {
-    font-size: 28px; /* Adjust font size */
+    font-size: 32px; 
     line-height: 40px;
   }
 
   .about-skills {
-    flex-basis: 100%; /* Full width for skills section */
-    margin: 20px 0 0 0; /* Reduce top margin */
+    flex-basis: 100%; 
+    margin: 20px 0 0 0; 
   }
 
   .about-skills ul li {
-    font-size: 16px; /* Adjust font size */
-    margin-bottom: 10px; /* Adjust margin */
+    font-size: 16px;
+    margin-bottom: 40px; 
   }
-
-
-  .education-content .row .education,
-  .education-content .row .internship
-  {
-    color: #e5e5e5;
-    flex:0 0 80%;
-    max-width: 50%;
-    
-  } 
   .header .menu_icon {
     display: block;
     color: #fff;
@@ -736,7 +729,7 @@ body {
     cursor: pointer;
   }
   .project-content{
-    padding: 300px 0;
+    padding: 10px 0;
   }
   .projects {
     display: flex;
@@ -753,8 +746,62 @@ body {
     font-size: 1em;
     text-align: left;
   }
+  .education-content {
+    padding: 0; 
+    margin: 0 auto; 
+    width: 100%; 
+  }
+  .education-content .row {
+    flex-direction: column;
+    align-items: center; 
+    height: auto; 
+    margin-bottom: 30px;
+  }
+
+  .education-content .row .education,
+  .education-content .row .internship {
+    flex: 0 0 100%; 
+    max-width: 100%; 
+    margin: 10px 0; 
+    padding: 15px; 
+    box-sizing: border-box; 
+  }
+
+  .education-content .row .timeline {
+    padding: 20px 10px;
+    border-radius: 5px;
+    width: 100%; 
+  }
+
+  .education-content h2.title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .education-content .row .timeline-item {
+    padding-left: 30px;
+    padding-bottom: 30px;
+  }
+
+  .education-content .row .timeline-item::before {
+    left: 5px;
+  }
+
+  .education-content .row .circle-dot {
+    height: 12px;
+    width: 12px;
+  }
+
+  .education-content .row .timeline-title {
+    font-size: 16px;
+  }
+
+  .education-content .row .timeline-text {
+    font-size: 14px;
+  }
   .contact-content{
     margin:auto;
+    padding: 50px 0;
     
   }
   /* Animation for menu dropdown */
@@ -773,10 +820,10 @@ body {
 /* For mobile and tablet views */
 @media only screen and (max-width: 1024px) {
   .header .logo {
-    margin-left: 20px; /* Adjust this as needed */
+    margin-left: 20px; 
   }
 
   .header .menu_icon {
-    margin-right: 20px; /* Ensure the menu icon is also visible */
+    margin-right: 20px; 
   }
 }
